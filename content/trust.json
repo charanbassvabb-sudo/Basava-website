@@ -1,39 +1,70 @@
 {
-  "cover": {
-    "image": "images/Trustimage1.webp",
-    "title": "Basava Social Welfare Foundation",
-    "subtitle": "Serving Humanity & Environment"
-  },
-  "hero": {
-    "title": "Our Purpose",
-    "subtitle": "To create a positive impact in the lives of underprivileged communities through sustainable development initiatives and social responsibility."
+  "impact": [
+    {
+      "number": "100+",
+      "label": "Lives Impacted"
+    },
+    {
+      "number": "20+",
+      "label": "Community Initiatives"
+    },
+    {
+      "number": "20+",
+      "label": "Volunteers"
+    }
+  ],
+  "initiatives": [
+    {
+      "title": "Education Support",
+      "text": "Providing access to education, learning resources, and opportunities for underprivileged children."
+    },
+    {
+      "title": "Community Development",
+      "text": "Supporting communities with essential resources and development programs."
+    },
+    {
+      "title": "Health Initiatives",
+      "text": "Organizing health awareness programs and community outreach activities."
+    },
+    {
+      "title": "Climate Action",
+      "text": "Climate change awareness and adaptation programs."
+    },
+    {
+      "title": "Waste Management",
+      "text": "Plastic pollution control and sustainable waste practices."
+    },
+    {
+      "title": "Environmental Conservation",
+      "text": "Community-based environmental protection initiatives."
+    }
+  ],
+  "recentActivityGallery": [
+    {
+      "src": "images/activity1.webp",
+      "alt": "Waste clean-up at Chipata First Level Hospital"
+    },
+    {
+      "src": "images/activity3.webp",
+      "alt": "Community members participating in clean-up and tree planting"
+    },
+    {
+      "src": "images/activity2.webp",
+      "alt": "Tree planting activity at Chipata First Level Hospital"
+    }
+  ],
+  "recentActivity": {
+    "intro": "In celebration of Earth Day, our team conducted a community initiative at Chipata First Level Hospital in partnership with the Lusaka City Council Health and Environment departments. The program focused on waste clean-up and tree planting to support environmental sustainability and promote a cleaner, healthier community."
   },
   "mission": {
     "title": "Our Mission",
     "para1": "Basava Social Welfare Foundation was established on the belief that true progress is achieved within a supportive and inclusive environment. As a social welfare organization, we are committed to creating an environment that empowers individuals, uplifts communities, and promotes equal opportunities for all. Our mission is to foster collective growth, encourage collaboration, and drive meaningful change that benefits society as a whole.",
     "para2": "We are committed to supporting individuals and communities through education, humanitarian aid, and sustainable development initiatives that create long-term impact."
   },
-  "initiatives": [
-    { "title": "Education Support", "text": "Providing access to education, learning resources, and opportunities for underprivileged children." },
-    { "title": "Community Development", "text": "Supporting communities with essential resources and development programs." },
-    { "title": "Health Initiatives", "text": "Organizing health awareness programs and community outreach activities." },
-    { "title": "Climate Action", "text": "Climate change awareness and adaptation programs." },
-    { "title": "Waste Management", "text": "Plastic pollution control and sustainable waste practices." },
-    { "title": "Environmental Conservation", "text": "Community-based environmental protection initiatives." }
-  ],
-  "impact": [
-    { "number": "100+", "label": "Lives Impacted" },
-    { "number": "20+", "label": "Community Initiatives" },
-    { "number": "20+", "label": "Volunteers" }
-  ],
-  "recentActivity": {
-    "intro": "In celebration of Earth Day, our team conducted a community initiative at Chipata First Level Hospital in partnership with the Lusaka City Council Health and Environment departments. The program focused on waste clean-up and tree planting to support environmental sustainability and promote a cleaner, healthier community."
+  "cta": {
+    "title": "Join Our Mission",
+    "text": "Together, we can create meaningful and lasting change"
   },
-  "recentActivityGallery": [
-    { "src": "images/activity1.webp", "alt": "Waste clean-up at Chipata First Level Hospital" },
-    { "src": "images/activity3.webp", "alt": "Community members participating in clean-up and tree planting" },
-    { "src": "images/activity2.webp", "alt": "Tree planting activity at Chipata First Level Hospital" }
-  ],
   "recentEvents": [
     {
       "title": "Founder's Birthday Celebration with Children at ZISE",
@@ -42,8 +73,14 @@
         "The event featured cake cutting, food donation, tree planting and interactive activities aimed at spreading joy, promoting inclusion and supporting children with disabilities."
       ],
       "images": [
-        { "src": "images/event-birthday1.webp", "alt": "Birthday celebration with children at Zambia Institute of Special Education" },
-        { "src": "images/event-treeplanting.webp", "alt": "Tree planting during the Founder's birthday celebration" }
+        {
+          "src": "images/event-birthday1.webp",
+          "alt": "Birthday celebration with children at Zambia Institute of Special Education"
+        },
+        {
+          "src": "images/event-treeplanting.webp",
+          "alt": "Tree planting during the Founder's birthday celebration"
+        }
       ]
     },
     {
@@ -54,19 +91,50 @@
         "During the exhibition, the Foundation showcased its initiatives in environmental conservation, sustainable livelihoods and community development while encouraging tree planting, responsible waste management and environmental awareness. The Foundation also donated tree seedlings to the guest of honor, as part of its commitment to a greener Zambia."
       ],
       "images": [
-        { "src": "images/event-worldenv.webp", "alt": "Basava Social Welfare Foundation at World Environment Day 2026, Lusaka National Park" },
-        { "src": "images/event-worldenv1.webp", "alt": "Basava Social Welfare Foundation at World Environment Day 2026, Lusaka National Park" }
+        {
+          "src": "images/event-worldenv.webp",
+          "alt": "Basava Social Welfare Foundation at World Environment Day 2026, Lusaka National Park"
+        },
+        {
+          "src": "images/event-worldenv1.webp",
+          "alt": "Basava Social Welfare Foundation at World Environment Day 2026, Lusaka National Park"
+        }
       ]
     }
   ],
+  "cover": {
+    "image": "images/Trustimage1.webp",
+    "title": "Basava Social Welfare Foundation",
+    "subtitle": "Serving Humanity & Environment"
+  },
+  "hero": {
+    "title": "Our Purpose",
+    "subtitle": "To create a positive impact in the lives of underprivileged communities through sustainable development initiatives and social responsibility."
+  },
   "team": [
-    { "image": "images/enterprisesteam1.webp", "name": "Durga Rao Basava", "role": "Founder and Chairperson", "bio": "10+ years of experience in engineering and managing projects with 20+ successful project deliveries. Specialized in structural design, execution, and leadership." },
-    { "image": "images/associates-team1.webp", "name": "Sri Basava", "role": "Director and secretary", "bio": "Financial Manager with strong expertise in budgeting, financial planning, and business analysis. Experienced in managing company finances, optimizing costs, and supporting strategic decision-making across multiple projects." },
-    { "image": "images/enterprises-associates-trust-team3.webp", "name": "Charan Basava", "role": "Director and Treasurer", "bio": "Chief Technical Officer with extensive experience in overseeing technical operations, system architecture, and project execution. Skilled in leading engineering teams, ensuring technical excellence, and aligning technology strategies with business goals." },
-    { "image": "images/trustteam4.webp", "name": "Alekhya Basava", "role": "Director and Vice Chairperson", "bio": "Director and Vice Chairperson, supporting governance, community outreach, and strategic direction across the Foundation's initiatives." }
-  ],
-  "cta": {
-    "title": "Join Our Mission",
-    "text": "Together, we can create meaningful and lasting change"
-  }
+    {
+      "image": "images/enterprisesteam1.webp",
+      "name": "Durga Rao Basava",
+      "role": "Founder and Chairperson",
+      "bio": "10+ years of experience in engineering and managing projects with 20+ successful project deliveries. Specialized in structural design, execution, and leadership."
+    },
+    {
+      "image": "images/sri.webp",
+      "name": "Sri Basava",
+      "role": "Director and secretary",
+      "bio": "Financial Manager with strong expertise in budgeting, financial planning, and business analysis. Experienced in managing company finances, optimizing costs, and supporting strategic decision-making across multiple projects."
+    },
+    {
+      "image": "images/enterprises-associates-trust-team3.webp",
+      "name": "Charan Basava",
+      "role": "Director and Treasurer",
+      "bio": "Chief Technical Officer with extensive experience in overseeing technical operations, system architecture, and project execution. Skilled in leading engineering teams, ensuring technical excellence, and aligning technology strategies with business goals."
+    },
+    {
+      "image": "images/trustteam4.webp",
+      "name": "Alekhya Basava",
+      "role": "Director and Vice Chairperson",
+      "bio": "Director and Vice Chairperson, supporting governance, community outreach, and strategic direction across the Foundation's initiatives."
+    }
+  ]
 }
