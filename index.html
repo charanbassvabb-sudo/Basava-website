@@ -446,5 +446,21 @@ function scrollToCompanies() {
 }
 </script>
 
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  // Netlify Identity invite / password-recovery links land on the
+  // homepage by default. This catches that and sends the user into
+  // the admin panel to finish setting up their account.
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", function (user) {
+      if (!user) {
+        window.netlifyIdentity.on("login", function () {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+
 </body>
 </html>
