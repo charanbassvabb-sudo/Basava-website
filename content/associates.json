@@ -1,54 +1,147 @@
 {
-  "hero": {
-    "title": "Basava Business Consultants",
-    "subtitle": "Trusted Accounting, Tax & Business Advisory Services in Zambia"
-  },
+  "values": [
+    {
+      "title": "Practical Solutions",
+      "text": "Tailored strategies that solve real business challenges."
+    },
+    {
+      "title": "Compliance Focused",
+      "text": "We help you stay compliant and reduce financial risk."
+    },
+    {
+      "title": "Drive Growth",
+      "text": "Insights and advice that support informed decisions."
+    },
+    {
+      "title": "Client Partnership",
+      "text": "We work alongside you as a trusted business partner."
+    }
+  ],
+  "why": [
+    {
+      "title": "Professional Expertise",
+      "text": "Accounting professionals with strong industry experience and professional training."
+    },
+    {
+      "title": "Regulatory Knowledge",
+      "text": "Deep understanding of Zambian tax laws and financial regulations."
+    },
+    {
+      "title": "Reliable Reporting",
+      "text": "Accurate and timely financial reporting you can trust."
+    },
+    {
+      "title": "Client-Focused",
+      "text": "Personalized services tailored to your business needs."
+    },
+    {
+      "title": "Confidential & Ethical",
+      "text": "We maintain strict confidentiality and ethical standards."
+    }
+  ],
   "about": {
     "title": "About Our Firm",
     "para1": "Basava Business Consultants is a Lusaka-based firm dedicated to delivering comprehensive and reliable financial services. We specialize in accounting, taxation and business advisory services tailored to meet the needs of individuals, startups, SMEs, and established companies.",
     "para2": "Our team is committed to providing accurate financial information, ensuring regulatory compliance, and supporting long-term business growth through strategic insights and professional expertise."
   },
-  "values": [
-    { "title": "Practical Solutions", "text": "Tailored strategies that solve real business challenges." },
-    { "title": "Compliance Focused", "text": "We help you stay compliant and reduce financial risk." },
-    { "title": "Drive Growth", "text": "Insights and advice that support informed decisions." },
-    { "title": "Client Partnership", "text": "We work alongside you as a trusted business partner." }
-  ],
-  "services": [
-    { "title": "Accounting & Bookkeeping", "text": "Accurate financial record-keeping to keep your business organized, compliant, and well-managed." },
-    { "title": "Tax Compliance & Payroll", "text": "Support with VAT, PAYE, NAPSA, NHIMA and payroll processing in line with Zambian statutory requirements." },
-    { "title": "Business Advisory", "text": "Practical financial and strategic guidance to support business growth and decision-making." },
-    { "title": "Financial Reporting & Audit Support", "text": "Preparation of financial records and reconciliations to support both internal management reporting and external auditors, ensuring audit readiness." },
-    { "title": "Budgeting & Cash Flow Management", "text": "We provide structured budgeting, cash flow analysis, and financial planning to support business stability and growth." },
-    { "title": "Secretarial Services", "text": "Company compliance support including statutory filings, company records management, and regulatory submissions." }
-  ],
-  "why": [
-    { "title": "Professional Expertise", "text": "Accounting professionals with strong industry experience and professional training." },
-    { "title": "Regulatory Knowledge", "text": "Deep understanding of Zambian tax laws and financial regulations." },
-    { "title": "Reliable Reporting", "text": "Accurate and timely financial reporting you can trust." },
-    { "title": "Client-Focused", "text": "Personalized services tailored to your business needs." },
-    { "title": "Confidential & Ethical", "text": "We maintain strict confidentiality and ethical standards." }
-  ],
-  "industries": ["SMEs", "Retail", "Construction", "Agriculture", "NGOs", "Professional Services", "Manufacturing"],
-  "team": [
-    { "image": "images/associates-team1.webp", "name": "Sri Basava", "role": "Managing Director", "bio": "Head of the company and Senior Accountant with extensive experience in financial management, auditing, and strategic planning. Oversees financial operations, ensures compliance, and contributes to high-level decision-making across the organization." },
-    { "image": "images/enterprisesteam1.webp", "name": "Durga Rao Basava", "role": "Director", "bio": "Director with over a decade of experience in engineering and project management. Responsible for administration operations, guiding project execution, and ensuring quality delivery across multiple large-scale projects.", "large": true },
-    { "image": "images/enterprises-associates-trust-team3.webp", "name": "Charan Basava", "role": "Chief Technical Officer", "bio": "Chief Technical Officer with extensive experience in overseeing technical operations, system architecture, and project execution. Skilled in leading engineering teams, ensuring technical excellence, and aligning technology strategies with business goals." }
-  ],
   "support": [
-    { "title": "Growing SMEs", "text": "Moving from informal record-keeping to organized books, so you always know where your business stands financially." },
-    { "title": "New Businesses", "text": "Getting registered and compliant from day one — PAYE, NAPSA, NHIMA and VAT set up correctly the first time." },
-    { "title": "Established Companies", "text": "Keeping records audit-ready year-round, so reporting season is a formality, not a scramble." }
-  ],
-  "faq": [
-    { "q": "Do I need to register for VAT?", "a": "It depends on your annual turnover and the nature of your business activities. We can review your figures against current ZRA thresholds and advise whether VAT registration applies to you." },
-    { "q": "What's the difference between PAYE, NAPSA, and NHIMA?", "a": "PAYE is income tax deducted from employee salaries and remitted to ZRA. NAPSA is the statutory pension contribution, and NHIMA is the national health insurance contribution. All three are typically processed together through payroll." },
-    { "q": "I run a small business — do I really need an accountant?", "a": "Even small and early-stage businesses benefit from proper bookkeeping, since it keeps you compliant, makes tax season painless, and gives you real numbers to make decisions with. We offer packages scaled to business size." },
-    { "q": "Can you help if my books are already behind or disorganized?", "a": "Yes — catching up backlogged records and reconciling past periods is one of our most common engagements. We'll assess where things stand and bring you current." },
-    { "q": "Do you work with businesses outside Lusaka?", "a": "Yes, we support clients across Zambia remotely, with in-person meetings available for clients based in or visiting Lusaka." }
+    {
+      "title": "Growing SMEs",
+      "text": "Moving from informal record-keeping to organized books, so you always know where your business stands financially."
+    },
+    {
+      "title": "New Businesses",
+      "text": "Getting registered and compliant from day one — PAYE, NAPSA, NHIMA and VAT set up correctly the first time."
+    },
+    {
+      "title": "Established Companies",
+      "text": "Keeping records audit-ready year-round, so reporting season is a formality, not a scramble."
+    }
   ],
   "cta": {
     "title": "Need Financial Guidance?",
     "text": "Partner with our experts for reliable financial solutions"
-  }
+  },
+  "faq": [
+    {
+      "q": "Do I need to register for VAT?",
+      "a": "It depends on your annual turnover and the nature of your business activities. We can review your figures against current ZRA thresholds and advise whether VAT registration applies to you."
+    },
+    {
+      "q": "What's the difference between PAYE, NAPSA, and NHIMA?",
+      "a": "PAYE is income tax deducted from employee salaries and remitted to ZRA. NAPSA is the statutory pension contribution, and NHIMA is the national health insurance contribution. All three are typically processed together through payroll."
+    },
+    {
+      "q": "I run a small business — do I really need an accountant?",
+      "a": "Even small and early-stage businesses benefit from proper bookkeeping, since it keeps you compliant, makes tax season painless, and gives you real numbers to make decisions with. We offer packages scaled to business size."
+    },
+    {
+      "q": "Can you help if my books are already behind or disorganized?",
+      "a": "Yes — catching up backlogged records and reconciling past periods is one of our most common engagements. We'll assess where things stand and bring you current."
+    },
+    {
+      "q": "Do you work with businesses outside Lusaka?",
+      "a": "Yes, we support clients across Zambia remotely, with in-person meetings available for clients based in or visiting Lusaka."
+    }
+  ],
+  "hero": {
+    "title": "Basava Business Consultants",
+    "subtitle": "Trusted Accounting, Tax & Business Advisory Services in Zambia"
+  },
+  "industries": [
+    "SMEs",
+    "Retail",
+    "Construction",
+    "Agriculture",
+    "NGOs",
+    "Professional Services",
+    "Manufacturing"
+  ],
+  "team": [
+    {
+      "image": "images/sri.webp",
+      "name": "Sri Basava",
+      "role": "Managing Director",
+      "bio": "Head of the company and Senior Accountant with extensive experience in financial management, auditing, and strategic planning. Oversees financial operations, ensures compliance, and contributes to high-level decision-making across the organization."
+    },
+    {
+      "image": "images/enterprisesteam1.webp",
+      "name": "Durga Rao Basava",
+      "role": "Director",
+      "bio": "Director with over a decade of experience in engineering and project management. Responsible for administration operations, guiding project execution, and ensuring quality delivery across multiple large-scale projects.",
+      "large": true
+    },
+    {
+      "image": "images/enterprises-associates-trust-team3.webp",
+      "name": "Charan Basava",
+      "role": "Chief Technical Officer",
+      "bio": "Chief Technical Officer with extensive experience in overseeing technical operations, system architecture, and project execution. Skilled in leading engineering teams, ensuring technical excellence, and aligning technology strategies with business goals."
+    }
+  ],
+  "services": [
+    {
+      "title": "Accounting & Bookkeeping",
+      "text": "Accurate financial record-keeping to keep your business organized, compliant, and well-managed."
+    },
+    {
+      "title": "Tax Compliance & Payroll",
+      "text": "Support with VAT, PAYE, NAPSA, NHIMA and payroll processing in line with Zambian statutory requirements."
+    },
+    {
+      "title": "Business Advisory",
+      "text": "Practical financial and strategic guidance to support business growth and decision-making."
+    },
+    {
+      "title": "Financial Reporting & Audit Support",
+      "text": "Preparation of financial records and reconciliations to support both internal management reporting and external auditors, ensuring audit readiness."
+    },
+    {
+      "title": "Budgeting & Cash Flow Management",
+      "text": "We provide structured budgeting, cash flow analysis, and financial planning to support business stability and growth."
+    },
+    {
+      "title": "Secretarial Services",
+      "text": "Company compliance support including statutory filings, company records management, and regulatory submissions."
+    }
+  ]
 }
