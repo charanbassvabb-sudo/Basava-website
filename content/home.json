@@ -1,0 +1,62 @@
+{
+  "hero": {
+    "title": "Basava Group of Companies",
+    "tagline": "Building Businesses. Creating Impact.",
+    "desc": "A diversified organisation based in Lusaka, Zambia, delivering excellence in construction, financial advisory, and community development."
+  },
+  "companies": [
+    {
+      "name": "Basava Enterprises Ltd",
+      "logo": "images/enterprises-logo.webp",
+      "text": "Specialists in concrete and steel structure construction, delivering durable and high-quality infrastructure solutions.",
+      "link": "basava-enterprises.html"
+    },
+    {
+      "name": "Basava Business Consultants",
+      "logo": "images/associates-logo.webp",
+      "text": "Professional accounting, tax, payroll, and advisory services supporting business growth and compliance.",
+      "link": "basava-associates.html"
+    },
+    {
+      "name": "Basava Social Welfare Foundation",
+      "logo": "images/trust-logo.webp",
+      "text": "A Non Profit organisation to serve humanity and the environment",
+      "link": "basava-trust.html"
+    }
+  ],
+  "stats": [
+    { "number": "3+", "label": "Companies Under One Group" },
+    { "number": "50+", "label": "Projects Delivered" },
+    { "number": "100+", "label": "Clients Served" },
+    { "number": "10+", "label": "Years of Combined Experience" }
+  ],
+  "why": [
+    { "title": "Multi-Sector Expertise", "text": "One trusted group spanning construction, financial advisory, and community development." },
+    { "title": "Experienced Leadership", "text": "Decades of combined experience guiding every project we take on." },
+    { "title": "Reliable Delivery", "text": "We consistently deliver dependable, high-quality outcomes on time." },
+    { "title": "Community-Minded", "text": "Every business decision is balanced with genuine social impact." }
+  ],
+  "projects": [
+    { "image": "images/project1.webp", "title": "Industrial Steel Structure", "text": "Large-scale steel framework for industrial use." },
+    { "image": "images/project2.webp", "title": "Commercial Building", "text": "Concrete structure for a multi-purpose facility." },
+    { "image": "images/project3.webp", "title": "Infrastructure Project", "text": "Structural works supporting public infrastructure." }
+  ],
+  "about": {
+    "title": "About Basava Group",
+    "text": "Basava Group of Companies is a Lusaka-based multi-sector organisation operating across engineering, financial consulting, and social development sectors. We are committed to building sustainable businesses while contributing positively to society through innovation, integrity, and collaboration."
+  },
+  "vision": {
+    "title": "Our Vision",
+    "text": "In a world where success is often pursued individually, Basava Group believes in growing together. Our mission is to empower communities, support businesses, and create opportunities that enable collective progress and long-term impact."
+  },
+  "faq": [
+    { "q": "What services does Basava Group offer?", "a": "Basava Group operates across three companies: construction and steel/concrete structures through Basava Enterprises, accounting and business advisory through Basava Business Consultants, and community development through the Basava Social Welfare Foundation." },
+    { "q": "Where is Basava Group based?", "a": "We are based at Plot 16797, MassMedia, Lusaka, Zambia, and serve clients across the country." },
+    { "q": "How do I get a quote for a construction project?", "a": "Reach out through our contact page or WhatsApp with a brief description of your project, and our Enterprises team will get back to you to discuss scope and timelines." },
+    { "q": "Can the different Basava companies work together on one engagement?", "a": "Yes. Many clients use more than one of our companies at once, for example construction services alongside financial advisory, and we coordinate across teams to keep things simple for you." }
+  ],
+  "cta": {
+    "title": "Ready to Build Something Great Together?",
+    "text": "Whether it's construction, financial advisory, or community impact, Basava Group is ready to partner with you."
+  }
+}

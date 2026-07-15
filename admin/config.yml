@@ -1,0 +1,493 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Where uploaded images are stored / served from by default.
+media_folder: "images"
+public_folder: "images"
+
+site_url: "https://www.basavagroup.org"
+display_url: "https://www.basavagroup.org"
+logo_url: "/MainLogo.png"
+
+locale: "en"
+
+collections:
+
+  # ------------------------------------------------------------------
+  - name: "global"
+    label: "🌐 Site-Wide Settings"
+    description: "Shown in the header/footer of every page: logo, contact details, social links."
+    files:
+      - name: "global"
+        label: "Global Settings"
+        file: "content/global.json"
+        fields:
+          - { label: "Logo", name: "logo", widget: "image", media_folder: "", public_folder: "" }
+          - { label: "Site Name (footer)", name: "siteName", widget: "string" }
+          - { label: "Footer Tagline", name: "footerTagline", widget: "string" }
+          - { label: "Address", name: "address", widget: "string" }
+          - { label: "Phone Number 1", name: "phone1", widget: "string" }
+          - { label: "Phone Number 2", name: "phone2", widget: "string" }
+          - { label: "Email — Enterprises", name: "emailEnterprises", widget: "string" }
+          - { label: "Email — Trust", name: "emailTrust", widget: "string" }
+          - { label: "Email — Associates", name: "emailAssociates", widget: "string" }
+          - { label: "Facebook Page 1 (URL)", name: "facebook1", widget: "string" }
+          - { label: "Facebook Page 2 (URL)", name: "facebook2", widget: "string" }
+
+  # ------------------------------------------------------------------
+  - name: "home"
+    label: "🏠 Home Page"
+    files:
+      - name: "home"
+        label: "Home Page Content"
+        file: "content/home.json"
+        fields:
+          - label: "Hero Banner"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Tagline", name: "tagline", widget: "string" }
+              - { label: "Description", name: "desc", widget: "text" }
+          - label: "Company Cards"
+            name: "companies"
+            widget: "list"
+            summary: "{{name}}"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Logo", name: "logo", widget: "image" }
+              - { label: "Description", name: "text", widget: "text" }
+              - { label: "Link (page it goes to)", name: "link", widget: "string" }
+          - label: "Stats"
+            name: "stats"
+            widget: "list"
+            summary: "{{number}} — {{label}}"
+            fields:
+              - { label: "Number", name: "number", widget: "string" }
+              - { label: "Label", name: "label", widget: "string" }
+          - label: "Why Choose Us"
+            name: "why"
+            widget: "list"
+            summary: "{{title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+          - label: "Featured Projects"
+            name: "projects"
+            widget: "list"
+            summary: "{{title}}"
+            fields:
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+          - label: "About Section"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+          - label: "Vision Section"
+            name: "vision"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+          - label: "FAQ"
+            name: "faq"
+            widget: "list"
+            summary: "{{q}}"
+            fields:
+              - { label: "Question", name: "q", widget: "string" }
+              - { label: "Answer", name: "a", widget: "text" }
+          - label: "Call To Action"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+
+  # ------------------------------------------------------------------
+  - name: "about_page"
+    label: "📄 About Page"
+    files:
+      - name: "about"
+        label: "About Page Content"
+        file: "content/about.json"
+        fields:
+          - label: "Hero Banner"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - label: "Who We Are"
+            name: "whoWeAre"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Paragraph 1", name: "para1", widget: "text" }
+              - { label: "Paragraph 2", name: "para2", widget: "text" }
+          - label: "Mission"
+            name: "mission"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+          - label: "Vision"
+            name: "vision"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+          - label: "Core Values"
+            name: "values"
+            widget: "list"
+            summary: "{{title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+          - label: "Stats"
+            name: "stats"
+            widget: "list"
+            summary: "{{number}} — {{label}}"
+            fields:
+              - { label: "Number", name: "number", widget: "string" }
+              - { label: "Label", name: "label", widget: "string" }
+          - label: "Why Choose Us"
+            name: "why"
+            widget: "list"
+            summary: "{{title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+          - label: "Call To Action"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+
+  # ------------------------------------------------------------------
+  - name: "contact_page"
+    label: "✉️ Contact Page"
+    files:
+      - name: "contact"
+        label: "Contact Page Content"
+        file: "content/contact.json"
+        fields:
+          - label: "Hero Banner"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - label: "Contact Info"
+            name: "info"
+            widget: "object"
+            fields:
+              - { label: "Address", name: "address", widget: "string" }
+              - { label: "Email (Enterprises & Trust)", name: "emailEnterprisesTrust", widget: "string" }
+              - { label: "Email (Associates)", name: "emailAssociates", widget: "string" }
+              - { label: "Phone", name: "phone", widget: "string" }
+              - { label: "WhatsApp Link", name: "whatsapp", widget: "string" }
+              - { label: "Note under the form", name: "note", widget: "string" }
+          - label: "Call To Action"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+
+  # ------------------------------------------------------------------
+  - name: "companies_page"
+    label: "🏢 Companies (overview) Page"
+    files:
+      - name: "companies"
+        label: "Companies Page Content"
+        file: "content/companies.json"
+        fields:
+          - label: "Hero Banner"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - label: "Company Cards"
+            name: "companies"
+            widget: "list"
+            summary: "{{name}}"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Logo", name: "logo", widget: "image" }
+              - { label: "Description", name: "text", widget: "text" }
+              - { label: "Link (page it goes to)", name: "link", widget: "string" }
+          - label: "Values"
+            name: "values"
+            widget: "list"
+            summary: "{{title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+          - label: "Call To Action"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+
+  # ------------------------------------------------------------------
+  - name: "enterprises_page"
+    label: "🏗️ Basava Enterprises Page"
+    files:
+      - name: "enterprises"
+        label: "Basava Enterprises Content"
+        file: "content/enterprises.json"
+        fields:
+          - label: "Hero Banner"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - label: "About Us"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Paragraph 1", name: "para1", widget: "text" }
+              - { label: "Paragraph 2", name: "para2", widget: "text" }
+          - label: "Services"
+            name: "services"
+            widget: "list"
+            summary: "{{title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+          - label: "Projects"
+            name: "projects"
+            widget: "list"
+            summary: "{{title}}"
+            fields:
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+          - label: "Why Choose Us"
+            name: "why"
+            widget: "list"
+            summary: "{{title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+          - label: "Team"
+            name: "team"
+            widget: "list"
+            summary: "{{name}} — {{role}}"
+            fields:
+              - { label: "Photo", name: "image", widget: "image" }
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Role", name: "role", widget: "string" }
+              - { label: "Bio (shown in popup)", name: "bio", widget: "text" }
+              - { label: "Show as larger photo", name: "large", widget: "boolean", required: false, default: false }
+          - label: "Call To Action"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+
+  # ------------------------------------------------------------------
+  - name: "associates_page"
+    label: "📊 Basava Business Consultants Page"
+    files:
+      - name: "associates"
+        label: "Basava Associates Content"
+        file: "content/associates.json"
+        fields:
+          - label: "Hero Banner"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - label: "About Our Firm"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Paragraph 1", name: "para1", widget: "text" }
+              - { label: "Paragraph 2", name: "para2", widget: "text" }
+          - label: "What Sets Us Apart"
+            name: "values"
+            widget: "list"
+            summary: "{{title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+          - label: "Services"
+            name: "services"
+            widget: "list"
+            summary: "{{title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+          - label: "Why Choose Us"
+            name: "why"
+            widget: "list"
+            summary: "{{title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+          - label: "Industries We Serve"
+            name: "industries"
+            widget: "list"
+          - label: "Team"
+            name: "team"
+            widget: "list"
+            summary: "{{name}} — {{role}}"
+            fields:
+              - { label: "Photo", name: "image", widget: "image" }
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Role", name: "role", widget: "string" }
+              - { label: "Bio (shown in popup)", name: "bio", widget: "text" }
+              - { label: "Show as larger photo", name: "large", widget: "boolean", required: false, default: false }
+          - label: "How We Support Clients"
+            name: "support"
+            widget: "list"
+            summary: "{{title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+          - label: "FAQ"
+            name: "faq"
+            widget: "list"
+            summary: "{{q}}"
+            fields:
+              - { label: "Question", name: "q", widget: "string" }
+              - { label: "Answer", name: "a", widget: "text" }
+          - label: "Call To Action"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+
+  # ------------------------------------------------------------------
+  - name: "trust_page"
+    label: "❤️ Basava Social Welfare Foundation Page"
+    files:
+      - name: "trust"
+        label: "Foundation Page Content"
+        file: "content/trust.json"
+        fields:
+          - label: "Cover Banner"
+            name: "cover"
+            widget: "object"
+            fields:
+              - { label: "Cover Image", name: "image", widget: "image" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - label: "Purpose Banner"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "text" }
+          - label: "Our Mission"
+            name: "mission"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Paragraph 1", name: "para1", widget: "text" }
+              - { label: "Paragraph 2", name: "para2", widget: "text" }
+          - label: "Initiatives"
+            name: "initiatives"
+            widget: "list"
+            summary: "{{title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+          - label: "Impact Numbers"
+            name: "impact"
+            widget: "list"
+            summary: "{{number}} — {{label}}"
+            fields:
+              - { label: "Number", name: "number", widget: "string" }
+              - { label: "Label", name: "label", widget: "string" }
+          - label: "Recent Activity Intro"
+            name: "recentActivity"
+            widget: "object"
+            fields:
+              - { label: "Intro Paragraph", name: "intro", widget: "text" }
+          - label: "Recent Activity Gallery"
+            name: "recentActivityGallery"
+            widget: "list"
+            summary: "{{alt}}"
+            fields:
+              - { label: "Image", name: "src", widget: "image" }
+              - { label: "Alt text (description)", name: "alt", widget: "string", required: false }
+          - label: "Recent Activity — Events"
+            name: "recentEvents"
+            widget: "list"
+            summary: "{{title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Paragraphs", name: "paragraphs", widget: "list" }
+              - label: "Photos"
+                name: "images"
+                widget: "list"
+                summary: "{{alt}}"
+                fields:
+                  - { label: "Image", name: "src", widget: "image" }
+                  - { label: "Alt text (description)", name: "alt", widget: "string", required: false }
+          - label: "Team"
+            name: "team"
+            widget: "list"
+            summary: "{{name}} — {{role}}"
+            fields:
+              - { label: "Photo", name: "image", widget: "image" }
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Role", name: "role", widget: "string" }
+              - { label: "Bio (shown in popup)", name: "bio", widget: "text" }
+              - { label: "Show as larger photo", name: "large", widget: "boolean", required: false, default: false }
+          - label: "Call To Action"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+
+  # ------------------------------------------------------------------
+  - name: "events_page"
+    label: "📅 Events & Activities Page"
+    files:
+      - name: "events"
+        label: "Events Page Content"
+        file: "content/events.json"
+        fields:
+          - label: "Hero Banner"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "text" }
+          - label: "Events (add, remove, or reorder freely)"
+            name: "events"
+            widget: "list"
+            summary: "{{title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Paragraphs", name: "paragraphs", widget: "list" }
+              - label: "Photos"
+                name: "images"
+                widget: "list"
+                summary: "{{alt}}"
+                fields:
+                  - { label: "Image", name: "src", widget: "image" }
+                  - { label: "Alt text (description)", name: "alt", widget: "string", required: false }
+          - label: "Call To Action"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }

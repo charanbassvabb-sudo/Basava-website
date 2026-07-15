@@ -1,0 +1,18 @@
+{
+  "hero": {
+    "title": "Contact Us",
+    "subtitle": "We\u2019d love to hear from you. Let\u2019s work together."
+  },
+  "info": {
+    "address": "Plot 16797, MassMedia, Lusaka, Zambia",
+    "emailEnterprisesTrust": "Basavaenterprisesltd@gmail.com",
+    "emailAssociates": "sribasava.bb@gmail.com",
+    "phone": "+260 966 328 089, +260 773 375 479",
+    "whatsapp": "https://wa.me/260966328089",
+    "note": "We typically respond within 24 hours."
+  },
+  "cta": {
+    "title": "Ready to Work With Us?",
+    "text": "Reach out today and let\u2019s build something impactful together."
+  }
+}
