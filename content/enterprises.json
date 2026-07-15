@@ -9,28 +9,86 @@
     "para2": "Our approach focuses on durability, efficiency, and precision. From planning to execution, we ensure that every project meets the highest standards of safety and quality."
   },
   "services": [
-    { "title": "Steel Fabrication", "text": "Custom structural steel fabrication for industrial and commercial projects." },
-    { "title": "Concrete Structures", "text": "Construction of strong, durable, and reliable concrete grey structures." },
-    { "title": "Project Management", "text": "Complete project planning, coordination, and execution." },
-    { "title": "Site Supervision", "text": "Professional on-site management ensuring quality and safety standards." },
-    { "title": "Structural Design Support", "text": "Engineering support for efficient and cost-effective construction." },
-    { "title": "Renovation & Maintenance", "text": "Upgrading and maintaining existing structures for long-term performance." }
+    {
+      "title": "Steel Fabrication",
+      "text": "Custom structural steel fabrication for industrial and commercial projects."
+    },
+    {
+      "title": "Concrete Structures",
+      "text": "Construction of strong, durable, and reliable concrete grey structures."
+    },
+    {
+      "title": "Project Management",
+      "text": "Complete project planning, coordination, and execution."
+    },
+    {
+      "title": "Site Supervision",
+      "text": "Professional on-site management ensuring quality and safety standards."
+    },
+    {
+      "title": "Structural Design Support",
+      "text": "Engineering support for efficient and cost-effective construction."
+    },
+    {
+      "title": "Renovation & Maintenance",
+      "text": "Upgrading and maintaining existing structures for long-term performance."
+    }
   ],
   "projects": [
-    { "image": "images/project1.webp", "title": "Industrial Steel Structure", "text": "Large-scale steel framework for industrial use." },
-    { "image": "images/project2.webp", "title": "Commercial Building", "text": "Concrete structure for a multi-purpose facility." },
-    { "image": "images/project3.webp", "title": "Infrastructure Project", "text": "Structural works supporting public infrastructure." }
+    {
+      "image": "images/project1.webp",
+      "title": "Industrial Steel Structure",
+      "text": "Large-scale steel framework for industrial use."
+    },
+    {
+      "image": "images/project2.webp",
+      "title": "Commercial Building",
+      "text": "Concrete structure for a multi-purpose facility."
+    },
+    {
+      "image": "images/project3.webp",
+      "title": "Infrastructure Project",
+      "text": "Structural works supporting public infrastructure."
+    }
   ],
   "why": [
-    { "title": "Engineering Expertise", "text": "Skilled professionals with strong technical knowledge." },
-    { "title": "Quality Assurance", "text": "Commitment to durable and high-standard construction." },
-    { "title": "Timely Delivery", "text": "Projects completed efficiently within agreed timelines." },
-    { "title": "Safety Focus", "text": "Strict adherence to construction safety standards." }
+    {
+      "title": "Engineering Expertise",
+      "text": "Skilled professionals with strong technical knowledge."
+    },
+    {
+      "title": "Quality Assurance",
+      "text": "Commitment to durable and high-standard construction."
+    },
+    {
+      "title": "Timely Delivery",
+      "text": "Projects completed efficiently within agreed timelines."
+    },
+    {
+      "title": "Safety Focus",
+      "text": "Strict adherence to construction safety standards."
+    }
   ],
   "team": [
-    { "image": "images/enterprisesteam1.webp", "name": "Durga Rao Basava", "role": "Managing Director", "bio": "20+ years of experience in engineering and managing projects with many successful project deliveries. Specialized in steel and concrete structure development, execution, and leadership.", "large": true },
-    { "image": "images/associates-team1.webp", "name": "Sri Basava", "role": "Finance Manager", "bio": "Finance Manager with strong expertise in budgeting, financial planning, and business analysis. Experienced in managing company finances, optimizing costs, and supporting strategic decision-making across multiple projects." },
-    { "image": "images/enterprises-associates-trust-team3.webp", "name": "Charan Basava", "role": "Chief Technical Officer", "bio": "Chief Technical Officer with extensive experience in overseeing technical operations, system architecture, and project execution. Skilled in leading engineering teams, ensuring technical excellence, and aligning technology strategies with business goals." }
+    {
+      "image": "images/enterprisesteam1.webp",
+      "name": "Durga Rao Basava",
+      "role": "Managing Director",
+      "bio": "20+ years of experience in engineering and managing projects with many successful project deliveries. Specialized in steel and concrete structure development, execution, and leadership.",
+      "large": true
+    },
+    {
+      "image": "images/whatsapp-image-2026-06-24-at-00.00.42.jpeg",
+      "name": "Sri Basava",
+      "role": "Finance Manager",
+      "bio": "Finance Manager with strong expertise in budgeting, financial planning, and business analysis. Experienced in managing company finances, optimizing costs, and supporting strategic decision-making across multiple projects."
+    },
+    {
+      "image": "images/enterprises-associates-trust-team3.webp",
+      "name": "Charan Basava",
+      "role": "Chief Technical Officer",
+      "bio": "Chief Technical Officer with extensive experience in overseeing technical operations, system architecture, and project execution. Skilled in leading engineering teams, ensuring technical excellence, and aligning technology strategies with business goals."
+    }
   ],
   "cta": {
     "title": "Start Your Next Project With Us",
