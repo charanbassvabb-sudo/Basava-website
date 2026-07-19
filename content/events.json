@@ -73,13 +73,16 @@
       ],
       "images": [
         {
-          "src": "images/1008b667-09a4-4b07-9fd7-675f540b529c.jpeg"
+          "src": "images/1008b667-09a4-4b07-9fd7-675f540b529c.jpeg",
+          "alt": "Alt 1"
         },
         {
-          "src": "images/22cb9d74-bd35-45c0-80bd-b4d07f3275b8.jpeg"
+          "src": "images/22cb9d74-bd35-45c0-80bd-b4d07f3275b8.jpeg",
+          "alt": "Alt 2"
         },
         {
-          "src": "images/68f72930-9581-44cd-b95e-ac9281f154ef.jpeg"
+          "src": "images/68f72930-9581-44cd-b95e-ac9281f154ef.jpeg",
+          "alt": "Alt 3"
         }
       ]
     }
