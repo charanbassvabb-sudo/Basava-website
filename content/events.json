@@ -11,8 +11,14 @@
         "The event featured cake cutting, food donation, tree planting and interactive activities aimed at spreading joy, promoting inclusion and supporting children with disabilities."
       ],
       "images": [
-        { "src": "images/event-birthday1.webp", "alt": "Birthday celebration with children at Zambia Institute of Special Education" },
-        { "src": "images/event-treeplanting.webp", "alt": "Tree planting during the Founder's birthday celebration" }
+        {
+          "src": "images/event-birthday1.webp",
+          "alt": "Birthday celebration with children at Zambia Institute of Special Education"
+        },
+        {
+          "src": "images/event-treeplanting.webp",
+          "alt": "Tree planting during the Founder's birthday celebration"
+        }
       ]
     },
     {
@@ -23,8 +29,14 @@
         "During the exhibition, the Foundation showcased its initiatives in environmental conservation, sustainable livelihoods and community development while encouraging tree planting, responsible waste management and environmental awareness. The Foundation also donated tree seedlings to the guest of honor, as part of its commitment to a greener Zambia."
       ],
       "images": [
-        { "src": "images/event-worldenv.webp", "alt": "Basava Social Welfare Foundation at World Environment Day 2026, Lusaka National Park" },
-        { "src": "images/event-worldenv1.webp", "alt": "Basava Social Welfare Foundation at World Environment Day 2026, Lusaka National Park" }
+        {
+          "src": "images/event-worldenv.webp",
+          "alt": "Basava Social Welfare Foundation at World Environment Day 2026, Lusaka National Park"
+        },
+        {
+          "src": "images/event-worldenv1.webp",
+          "alt": "Basava Social Welfare Foundation at World Environment Day 2026, Lusaka National Park"
+        }
       ]
     },
     {
@@ -33,9 +45,42 @@
         "In celebration of Earth Day, our team conducted a community initiative at Chipata First Level Hospital in partnership with the Lusaka City Council Health and Environment departments. The program focused on waste clean-up and tree planting to support environmental sustainability and promote a cleaner, healthier community."
       ],
       "images": [
-        { "src": "images/activity1.webp", "alt": "Waste clean-up at Chipata First Level Hospital" },
-        { "src": "images/activity3.webp", "alt": "Community members participating in clean-up and tree planting" },
-        { "src": "images/activity2.webp", "alt": "Tree planting activity at Chipata First Level Hospital" }
+        {
+          "src": "images/activity1.webp",
+          "alt": "Waste clean-up at Chipata First Level Hospital"
+        },
+        {
+          "src": "images/activity3.webp",
+          "alt": "Community members participating in clean-up and tree planting"
+        },
+        {
+          "src": "images/activity2.webp",
+          "alt": "Tree planting activity at Chipata First Level Hospital"
+        }
+      ]
+    },
+    {
+      "title": "Basava Social Welfare Foundation Commemorates Nelson Mandela International Day with Women’s Empowerment and Community Service Program.",
+      "paragraphs": [
+        "The event",
+        "held in collaboration with the High Commission of India to Zambia",
+        "the Zambia Police Service Victim Support Unit",
+        "YWCA Zambia",
+        "and the Lusaka City Council",
+        "featured tree seedling planting",
+        "waste collection",
+        "and community service activities."
+      ],
+      "images": [
+        {
+          "src": "images/1008b667-09a4-4b07-9fd7-675f540b529c.jpeg"
+        },
+        {
+          "src": "images/22cb9d74-bd35-45c0-80bd-b4d07f3275b8.jpeg"
+        },
+        {
+          "src": "images/68f72930-9581-44cd-b95e-ac9281f154ef.jpeg"
+        }
       ]
     }
   ],
