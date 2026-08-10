@@ -6,8 +6,44 @@
   <title>Basava Group — Content Admin</title>
   <meta name="robots" content="noindex, nofollow" />
   <link rel="icon" href="../MainLogo.png" />
+  <meta name="theme-color" content="#141119" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Fraunces:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
 
   <style>
+    :root {
+      --ed-bg: #141119;
+      --ed-bg-deep: #1c1822;
+      --ed-text: #f3ece0;
+      --ed-accent: #e0895a;
+      --ed-on-accent: #17140f;
+      --ed-serif: 'Fraunces', Georgia, serif;
+      --ed-sans: 'Poppins', sans-serif;
+    }
+
+    /* Page chrome behind the editor app — matches the public site's
+       Editorial Magazine look (Fraunces + warm ink + terracotta) so
+       there's no jarring hand-off between the two. */
+    html, body {
+      background: var(--ed-bg);
+      color: var(--ed-text);
+      font-family: var(--ed-sans);
+    }
+
+    /* Best-effort nudge for Decap CMS's own editor UI: it renders as a
+       large, independent React app with its own compiled design system,
+       so this can shift base type/inputs but can't safely repaint every
+       internal panel — see the note in ADMIN-SETUP-README.md. Harmless
+       if a given element doesn't pick it up. */
+    body, input, textarea, select, button {
+      font-family: var(--ed-sans) !important;
+    }
+    h1, h2, h3 {
+      font-family: var(--ed-serif) !important;
+    }
+
     /* Branded loading screen — shown while the editor (a large JS app)
        downloads and starts up, so the first thing anyone sees is the
        Basava Group brand rather than a blank white page. It removes
@@ -20,55 +56,54 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 18px;
-      background: linear-gradient(135deg, #070014, #0d0030, #070014);
-      color: #fff;
-      font-family: 'Poppins', Arial, sans-serif;
+      gap: 16px;
+      background: var(--ed-bg);
+      color: var(--ed-text);
+      font-family: var(--ed-sans);
       transition: opacity 0.5s ease;
     }
     #admin-splash img {
-      width: 96px;
-      height: 96px;
+      width: 84px;
+      height: 84px;
       object-fit: contain;
-      filter: drop-shadow(0 0 30px rgba(0, 195, 255, 0.35));
-      animation: admin-pulse 2.2s ease-in-out infinite;
+      opacity: 0.95;
     }
     #admin-splash .admin-splash-title {
-      font-size: 18px;
+      font-family: var(--ed-serif);
+      font-size: 20px;
       font-weight: 600;
-      letter-spacing: 0.3px;
+      letter-spacing: -0.2px;
     }
     #admin-splash .admin-splash-sub {
-      font-size: 13px;
-      color: rgba(255, 255, 255, 0.55);
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: rgba(243, 236, 224, 0.5);
     }
     #admin-splash .admin-splash-bar {
-      width: 160px;
-      height: 3px;
-      border-radius: 3px;
-      background: rgba(255, 255, 255, 0.12);
+      width: 140px;
+      height: 2px;
+      background: rgba(243, 236, 224, 0.14);
       overflow: hidden;
     }
     #admin-splash .admin-splash-bar::after {
       content: "";
       display: block;
-      width: 40%;
+      width: 30%;
       height: 100%;
-      background: linear-gradient(90deg, #00c3ff, #0073b7);
-      border-radius: 3px;
-      animation: admin-loading 1.3s ease-in-out infinite;
-    }
-    @keyframes admin-pulse {
-      0%, 100% { transform: scale(1); opacity: 1; }
-      50% { transform: scale(1.06); opacity: 0.85; }
+      background: var(--ed-accent);
+      animation: admin-loading 1.15s ease-in-out infinite;
     }
     @keyframes admin-loading {
       0% { transform: translateX(-100%); }
-      100% { transform: translateX(350%); }
+      100% { transform: translateX(430%); }
     }
     #admin-splash.admin-splash-hide {
       opacity: 0;
       pointer-events: none;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      #admin-splash .admin-splash-bar::after { animation: none; }
     }
   </style>
 
@@ -79,9 +114,9 @@
 
   <div id="admin-splash">
     <img src="../MainLogo.png" alt="Basava Group" />
-    <div class="admin-splash-title">Basava Group Content Admin</div>
+    <div class="admin-splash-title">Basava Group</div>
     <div class="admin-splash-bar"></div>
-    <div class="admin-splash-sub">Loading the editor…</div>
+    <div class="admin-splash-sub">Loading the editor</div>
   </div>
 
   <!-- Decap CMS (the editor UI itself) -->

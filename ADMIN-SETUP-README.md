@@ -102,3 +102,13 @@ change before publishing.
 - If you ever want to change *page layout or design* (not just text
   and images), that's still a code change your developer would make —
   the admin panel is for content, not structure.
+- **Admin panel branding**: the loading screen, page background, and
+  base type now match the website (Basava logo, warm ink background,
+  Fraunces/Poppins fonts). The editor itself (Decap CMS) is a
+  third-party open-source app loaded fresh from its own CDN each time,
+  with its own internal design (buttons, panels, sidebar colors) —
+  that part can't be fully repainted to match the site without forking
+  and self-hosting the editor, which would then need maintaining
+  through every future Decap CMS update. What's here is the practical
+  middle ground: on-brand the moment you arrive, standard (but clean
+  and reliable) editor chrome once you're inside.
