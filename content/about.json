@@ -1,0 +1,40 @@
+{
+  "hero": {
+    "title": "About Basava Group",
+    "subtitle": "Building Businesses. Creating Impact."
+  },
+  "whoWeAre": {
+    "title": "Who We Are",
+    "para1": "Basava Group of Companies is a Lusaka-based, multi-sector organisation operating across construction, financial consulting, and social development. We bring together expertise from diverse industries to deliver high-quality services, drive innovation, and create long-term value for our clients and communities.",
+    "para2": "Our approach is rooted in professionalism, integrity, and a commitment to excellence. Whether through infrastructure development, financial advisory, or community initiatives, we aim to make a meaningful and lasting impact."
+  },
+  "mission": {
+    "title": "Our Mission",
+    "text": "To deliver exceptional services across all sectors we operate in while upholding the highest standards of integrity, innovation, and quality. We are committed to empowering businesses and communities through reliable and sustainable solutions."
+  },
+  "vision": {
+    "title": "Our Vision",
+    "text": "To build a future where success is shared. We strive to become a trusted and globally recognized group that not only drives business growth but also contributes meaningfully to societal development and collective progress."
+  },
+  "values": [
+    { "title": "Integrity", "text": "We operate with honesty, transparency, and strong ethical principles." },
+    { "title": "Excellence", "text": "We are committed to delivering high-quality results in every project." },
+    { "title": "Collaboration", "text": "We believe in growing together with our clients, partners, and communities." },
+    { "title": "Impact", "text": "We focus on creating meaningful and lasting contributions to society." }
+  ],
+  "stats": [
+    { "number": "3+", "label": "Companies" },
+    { "number": "50+", "label": "Projects" },
+    { "number": "100+", "label": "Clients Served" }
+  ],
+  "why": [
+    { "title": "Experienced Team", "text": "Our professionals bring industry knowledge and practical expertise." },
+    { "title": "Reliable Services", "text": "We consistently deliver dependable and high-quality solutions." },
+    { "title": "Multi-Sector Expertise", "text": "Our strength lies in combining engineering, finance, and social impact." },
+    { "title": "Client-Focused Approach", "text": "We prioritize understanding client needs and delivering tailored solutions." }
+  ],
+  "cta": {
+    "title": "Work With Us",
+    "text": "Partner with Basava Group to build sustainable solutions and long-term success"
+  }
+}

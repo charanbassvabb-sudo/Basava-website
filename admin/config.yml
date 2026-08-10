@@ -1,0 +1,552 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Where uploaded images are stored / served from by default.
+media_folder: "images"
+public_folder: "images"
+
+site_url: "https://www.basavagroup.org"
+display_url: "https://www.basavagroup.org"
+logo_url: "/MainLogo.png"
+
+locale: "en"
+
+collections:
+
+  # ------------------------------------------------------------------
+  - name: "global"
+    label: "🌐 Site-Wide Settings"
+    description: "The most important settings — these appear on EVERY page: the logo, the footer, and the address that drives the interactive map on the Contact page. Start here."
+    files:
+      - name: "global"
+        label: "Global Settings"
+        file: "content/global.json"
+        fields:
+          - { label: "Logo", name: "logo", widget: "image", media_folder: "", public_folder: "", hint: "Shown in the header of every page and as the browser-tab icon." }
+          - { label: "Site Name (footer)", name: "siteName", widget: "string", hint: "The big heading shown in the footer, on the left." }
+          - { label: "Footer Tagline", name: "footerTagline", widget: "string", hint: "Short line of text under the site name in the footer." }
+          - { label: "Address", name: "address", widget: "string", hint: "📍 One field controls it all: the address shown in the footer of every page, on the Contact page, AND it automatically moves the interactive map and the 'Get Directions' buttons site-wide. You never need to touch a map separately — just update this text." }
+          - { label: "Phone Number 1", name: "phone1", widget: "string", hint: "Shown in the header/footer as a tap-to-call number." }
+          - { label: "Phone Number 2", name: "phone2", widget: "string", hint: "Second tap-to-call number, shown alongside Phone 1." }
+          - { label: "Email — Enterprises", name: "emailEnterprises", widget: "string", hint: "Shown in the footer's Email column." }
+          - { label: "Email — Trust", name: "emailTrust", widget: "string", hint: "Shown in the footer's Email column." }
+          - { label: "Email — Associates", name: "emailAssociates", widget: "string", hint: "Used on the Home page contact section." }
+          - { label: "Facebook Page 1 (URL)", name: "facebook1", widget: "string", hint: "Full link to a Facebook page, e.g. https://www.facebook.com/yourpage — shown as a 'Follow Us' link in the footer." }
+          - { label: "Facebook Page 2 (URL)", name: "facebook2", widget: "string", hint: "A second Facebook page link, if you run more than one." }
+
+  # ------------------------------------------------------------------
+  - name: "home"
+    label: "🏠 Home Page"
+    description: "Everything on the home page, top to bottom, in the order it appears on the site."
+    files:
+      - name: "home"
+        label: "Home Page Content"
+        file: "content/home.json"
+        fields:
+          - label: "Hero Banner"
+            name: "hero"
+            widget: "object"
+            hint: "The large full-screen introduction at the very top of the home page."
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Tagline", name: "tagline", widget: "string", hint: "This rotates through a few phrases automatically on the live site — this is the first one shown." }
+              - { label: "Description", name: "desc", widget: "text" }
+          - label: "Company Cards"
+            name: "companies"
+            widget: "list"
+            summary: "{{name}}"
+            hint: "The three company cards. Click 'Add Company Cards' to add a new one, drag ⠿ to reorder, or use the trash icon to remove one."
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Logo", name: "logo", widget: "image" }
+              - { label: "Description", name: "text", widget: "text" }
+              - { label: "Link (page it goes to)", name: "link", widget: "string", hint: "e.g. basava-enterprises.html — the filename of the page this card links to." }
+          - label: "Stats"
+            name: "stats"
+            widget: "list"
+            summary: "{{number}} — {{label}}"
+            hint: "The animated number counters (e.g. '50+ Projects Delivered'). Add, remove, or reorder freely."
+            fields:
+              - { label: "Number", name: "number", widget: "string", hint: "e.g. 50+ or 3+ — keep it short, it animates on scroll." }
+              - { label: "Label", name: "label", widget: "string" }
+          - label: "Why Choose Us"
+            name: "why"
+            widget: "list"
+            summary: "{{title}}"
+            hint: "The 'Why Choose Basava Group' cards. Add, remove, or reorder freely."
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+          - label: "Featured Projects"
+            name: "projects"
+            widget: "list"
+            summary: "{{title}}"
+            hint: "Photo cards under 'Featured Work'."
+            fields:
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+          - label: "About Section"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+          - label: "Vision Section"
+            name: "vision"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+          - label: "Testimonials"
+            name: "testimonials"
+            widget: "list"
+            summary: "{{name}}"
+            hint: "⭐ Add a real client quote here to switch on the 'What Our Clients Say' section on the Home page. Leave this empty and the section simply stays hidden on the live site — it never shows placeholder text."
+            required: false
+            fields:
+              - { label: "Quote", name: "quote", widget: "text", hint: "The testimonial text itself, without quotation marks." }
+              - { label: "Client Name", name: "name", widget: "string" }
+              - { label: "Business / Role", name: "role", widget: "string" }
+              - { label: "Star Rating", name: "stars", widget: "number", default: 5, min: 1, max: 5, value_type: "int", hint: "1–5 stars." }
+          - label: "FAQ"
+            name: "faq"
+            widget: "list"
+            summary: "{{q}}"
+            hint: "Frequently asked questions shown as an expandable list."
+            fields:
+              - { label: "Question", name: "q", widget: "string" }
+              - { label: "Answer", name: "a", widget: "text" }
+          - label: "Call To Action"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+
+  # ------------------------------------------------------------------
+  - name: "about_page"
+    label: "📄 About Page"
+    files:
+      - name: "about"
+        label: "About Page Content"
+        file: "content/about.json"
+        fields:
+          - label: "Hero Banner"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - label: "Who We Are"
+            name: "whoWeAre"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Paragraph 1", name: "para1", widget: "text" }
+              - { label: "Paragraph 2", name: "para2", widget: "text" }
+          - label: "Mission"
+            name: "mission"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+          - label: "Vision"
+            name: "vision"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+          - label: "Core Values"
+            name: "values"
+            widget: "list"
+            summary: "{{title}}"
+            hint: "Add, remove, or reorder freely."
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+          - label: "Stats"
+            name: "stats"
+            widget: "list"
+            summary: "{{number}} — {{label}}"
+            fields:
+              - { label: "Number", name: "number", widget: "string" }
+              - { label: "Label", name: "label", widget: "string" }
+          - label: "Why Choose Us"
+            name: "why"
+            widget: "list"
+            summary: "{{title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+          - label: "Call To Action"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+
+  # ------------------------------------------------------------------
+  - name: "contact_page"
+    label: "✉️ Contact Page"
+    files:
+      - name: "contact"
+        label: "Contact Page Content"
+        file: "content/contact.json"
+        fields:
+          - label: "Hero Banner"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - label: "Contact Info"
+            name: "info"
+            widget: "object"
+            fields:
+              - { label: "Address", name: "address", widget: "string", hint: "📍 Also automatically moves the interactive map and the 'Get Directions' button futher down this same page." }
+              - { label: "Email (Enterprises & Trust)", name: "emailEnterprisesTrust", widget: "string" }
+              - { label: "Email (Associates)", name: "emailAssociates", widget: "string" }
+              - { label: "Phone", name: "phone", widget: "string" }
+              - { label: "WhatsApp Link", name: "whatsapp", widget: "string", hint: "Full link, e.g. https://wa.me/260966328089" }
+              - { label: "Note under the form", name: "note", widget: "string" }
+          - label: "Call To Action"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+
+  # ------------------------------------------------------------------
+  - name: "companies_page"
+    label: "🏢 Companies (overview) Page"
+    files:
+      - name: "companies"
+        label: "Companies Page Content"
+        file: "content/companies.json"
+        fields:
+          - label: "Hero Banner"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - label: "Company Cards"
+            name: "companies"
+            widget: "list"
+            summary: "{{name}}"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Logo", name: "logo", widget: "image" }
+              - { label: "Description", name: "text", widget: "text" }
+              - { label: "Link (page it goes to)", name: "link", widget: "string" }
+          - label: "Values"
+            name: "values"
+            widget: "list"
+            summary: "{{title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+          - label: "Call To Action"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+
+  # ------------------------------------------------------------------
+  - name: "enterprises_page"
+    label: "🏗️ Basava Enterprises Page"
+    files:
+      - name: "enterprises"
+        label: "Basava Enterprises Content"
+        file: "content/enterprises.json"
+        fields:
+          - label: "Hero Banner"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - label: "About Us"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Paragraph 1", name: "para1", widget: "text" }
+              - { label: "Paragraph 2", name: "para2", widget: "text" }
+          - label: "Services"
+            name: "services"
+            widget: "list"
+            summary: "{{title}}"
+            hint: "Add, remove, or reorder freely — each one becomes a card."
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+          - label: "Projects"
+            name: "projects"
+            widget: "list"
+            summary: "{{title}}"
+            fields:
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+          - label: "Why Choose Us"
+            name: "why"
+            widget: "list"
+            summary: "{{title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+          - label: "Testimonials"
+            name: "testimonials"
+            widget: "list"
+            summary: "{{name}}"
+            required: false
+            hint: "⭐ Add a real client quote to switch on the 'What Our Clients Say' section on this page. Leave empty and it stays hidden — never shows placeholder text."
+            fields:
+              - { label: "Quote", name: "quote", widget: "text" }
+              - { label: "Client Name", name: "name", widget: "string" }
+              - { label: "Business / Role", name: "role", widget: "string" }
+              - { label: "Star Rating", name: "stars", widget: "number", default: 5, min: 1, max: 5, value_type: "int" }
+          - label: "Team"
+            name: "team"
+            widget: "list"
+            summary: "{{name}} — {{role}}"
+            hint: "Team members shown as photo cards. Clicking a card on the live site opens their bio in a popup."
+            fields:
+              - { label: "Photo", name: "image", widget: "image" }
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Role", name: "role", widget: "string" }
+              - { label: "Bio (shown in popup)", name: "bio", widget: "text" }
+              - { label: "Show as larger photo", name: "large", widget: "boolean", required: false, default: false }
+          - label: "Call To Action"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+
+  # ------------------------------------------------------------------
+  - name: "associates_page"
+    label: "📊 Basava Business Consultants Page"
+    files:
+      - name: "associates"
+        label: "Basava Associates Content"
+        file: "content/associates.json"
+        fields:
+          - label: "Hero Banner"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - label: "About Our Firm"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Paragraph 1", name: "para1", widget: "text" }
+              - { label: "Paragraph 2", name: "para2", widget: "text" }
+          - label: "What Sets Us Apart"
+            name: "values"
+            widget: "list"
+            summary: "{{title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+          - label: "Services"
+            name: "services"
+            widget: "list"
+            summary: "{{title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+          - label: "Why Choose Us"
+            name: "why"
+            widget: "list"
+            summary: "{{title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+          - label: "Industries We Serve"
+            name: "industries"
+            widget: "list"
+            hint: "Simple list of one-word/short-phrase industry badges, e.g. 'Retail'."
+          - label: "Testimonials"
+            name: "testimonials"
+            widget: "list"
+            summary: "{{name}}"
+            required: false
+            hint: "⭐ Add a real client quote to switch on the 'What Our Clients Say' section on this page. Leave empty and it stays hidden — never shows placeholder text."
+            fields:
+              - { label: "Quote", name: "quote", widget: "text" }
+              - { label: "Client Name", name: "name", widget: "string" }
+              - { label: "Business / Role", name: "role", widget: "string" }
+              - { label: "Star Rating", name: "stars", widget: "number", default: 5, min: 1, max: 5, value_type: "int" }
+          - label: "Team"
+            name: "team"
+            widget: "list"
+            summary: "{{name}} — {{role}}"
+            fields:
+              - { label: "Photo", name: "image", widget: "image" }
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Role", name: "role", widget: "string" }
+              - { label: "Bio (shown in popup)", name: "bio", widget: "text" }
+              - { label: "Show as larger photo", name: "large", widget: "boolean", required: false, default: false }
+          - label: "How We Support Clients"
+            name: "support"
+            widget: "list"
+            summary: "{{title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+          - label: "FAQ"
+            name: "faq"
+            widget: "list"
+            summary: "{{q}}"
+            fields:
+              - { label: "Question", name: "q", widget: "string" }
+              - { label: "Answer", name: "a", widget: "text" }
+          - label: "Call To Action"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+
+  # ------------------------------------------------------------------
+  - name: "trust_page"
+    label: "❤️ Basava Social Welfare Foundation Page"
+    files:
+      - name: "trust"
+        label: "Foundation Page Content"
+        file: "content/trust.json"
+        fields:
+          - label: "Cover Banner"
+            name: "cover"
+            widget: "object"
+            hint: "The large photo banner at the very top of the page."
+            fields:
+              - { label: "Cover Image", name: "image", widget: "image" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - label: "Purpose Banner"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "text" }
+          - label: "Our Mission"
+            name: "mission"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Paragraph 1", name: "para1", widget: "text" }
+              - { label: "Paragraph 2", name: "para2", widget: "text" }
+          - label: "Initiatives"
+            name: "initiatives"
+            widget: "list"
+            summary: "{{title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+          - label: "Impact Numbers"
+            name: "impact"
+            widget: "list"
+            summary: "{{number}} — {{label}}"
+            fields:
+              - { label: "Number", name: "number", widget: "string" }
+              - { label: "Label", name: "label", widget: "string" }
+          - label: "Recent Activity Intro"
+            name: "recentActivity"
+            widget: "object"
+            fields:
+              - { label: "Intro Paragraph", name: "intro", widget: "text" }
+          - label: "Recent Activity Gallery"
+            name: "recentActivityGallery"
+            widget: "list"
+            summary: "{{alt}}"
+            hint: "Photos shown in a row. Click any photo on the live site to view it full-size."
+            fields:
+              - { label: "Image", name: "src", widget: "image" }
+              - { label: "Alt text (description)", name: "alt", widget: "string", required: false }
+          - label: "Recent Activity — Events"
+            name: "recentEvents"
+            widget: "list"
+            summary: "{{title}}"
+            hint: "This list is separate from the '📅 Events & Activities Page' section — adding an event here does not automatically add it there. If you add a new event, add it in both places to keep them in sync."
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Paragraphs", name: "paragraphs", widget: "list", hint: "Each entry is one paragraph of text." }
+              - label: "Photos"
+                name: "images"
+                widget: "list"
+                summary: "{{alt}}"
+                fields:
+                  - { label: "Image", name: "src", widget: "image" }
+                  - { label: "Alt text (description)", name: "alt", widget: "string", required: false }
+          - label: "Testimonials"
+            name: "testimonials"
+            widget: "list"
+            summary: "{{name}}"
+            required: false
+            hint: "⭐ Add a real quote from a partner, volunteer, or beneficiary to switch on the 'What People Say' section on this page. Leave empty and it stays hidden — never shows placeholder text."
+            fields:
+              - { label: "Quote", name: "quote", widget: "text" }
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Role / Organisation", name: "role", widget: "string" }
+              - { label: "Star Rating", name: "stars", widget: "number", default: 5, min: 1, max: 5, value_type: "int" }
+          - label: "Team"
+            name: "team"
+            widget: "list"
+            summary: "{{name}} — {{role}}"
+            fields:
+              - { label: "Photo", name: "image", widget: "image" }
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Role", name: "role", widget: "string" }
+              - { label: "Bio (shown in popup)", name: "bio", widget: "text" }
+              - { label: "Show as larger photo", name: "large", widget: "boolean", required: false, default: false }
+          - label: "Call To Action"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+
+  # ------------------------------------------------------------------
+  - name: "events_page"
+    label: "📅 Events & Activities Page"
+    files:
+      - name: "events"
+        label: "Events Page Content"
+        file: "content/events.json"
+        fields:
+          - label: "Hero Banner"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "text" }
+          - label: "Events (add, remove, or reorder freely)"
+            name: "events"
+            widget: "list"
+            summary: "{{title}}"
+            hint: "To add a new event: click 'Add Events', give it a title, add one or more paragraphs, and upload photos. It appears on this page immediately after you publish."
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Paragraphs", name: "paragraphs", widget: "list", hint: "Each entry becomes one paragraph of text." }
+              - label: "Photos"
+                name: "images"
+                widget: "list"
+                summary: "{{alt}}"
+                fields:
+                  - { label: "Image", name: "src", widget: "image" }
+                  - { label: "Alt text (description)", name: "alt", widget: "string", required: false }
+          - label: "Call To Action"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }

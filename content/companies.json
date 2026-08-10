@@ -1,0 +1,35 @@
+{
+  "hero": {
+    "title": "Our Companies",
+    "subtitle": "Explore the diverse businesses driving innovation, growth, and impact under Basava Group"
+  },
+  "companies": [
+    {
+      "name": "Basava Enterprises Ltd",
+      "logo": "images/enterprises-logo.webp",
+      "text": "A construction company specializing in concrete and steel structure development for industrial, commercial, and infrastructure projects across Zambia.",
+      "link": "basava-enterprises.html"
+    },
+    {
+      "name": "Basava Business Consultants",
+      "logo": "images/associates-logo.webp",
+      "text": "Trusted accounting, tax, payroll, and business advisory services helping businesses maintain compliance and achieve sustainable growth.",
+      "link": "basava-associates.html"
+    },
+    {
+      "name": "Basava Social Welfare Foundation",
+      "logo": "images/trust-logo.webp",
+      "text": "Focused on community development, education, and social impact initiatives aimed at empowering individuals and building stronger communities.",
+      "link": "basava-trust.html"
+    }
+  ],
+  "values": [
+    { "title": "Excellence", "text": "We deliver high-quality services across all sectors we operate in." },
+    { "title": "Integrity", "text": "We uphold transparency, trust, and ethical business practices." },
+    { "title": "Impact", "text": "We are committed to making a positive difference in society." }
+  ],
+  "cta": {
+    "title": "Looking to Work With Us?",
+    "text": "Partner with Basava Group and experience professional, reliable, and impactful services."
+  }
+}
